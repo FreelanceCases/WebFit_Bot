@@ -127,7 +127,8 @@ fun video_Reciever(currentStake: MutableState<ModelForGet>, button_clicked: Muta
         .requiredSize(520.dp)
         .fillMaxSize()) {
         val context = LocalContext.current
-        val videoUrl = "http://134.0.118.41:3000/video/${currentStake.value.mobile.toString()}"
+        // TODO: EDIT
+        val videoUrl = "http://10.0.2.2:3000/video/${currentStake.value.mobile.toString()}"
 
         val exoPlayer = remember(context) {
             SimpleExoPlayer.Builder(context).setVideoChangeFrameRateStrategy(

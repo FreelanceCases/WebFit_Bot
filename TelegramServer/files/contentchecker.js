@@ -33,7 +33,7 @@ function remove(file,newPath,sep="_",stpath=staticpath){
     console.log(fullname)
     fullname.shift()
     fullname.join(sep)
-    fs.rename(stpath+file, newPath+"/"+fullname.join(","), err => {
+    fs.rename(stpath+ "/" + file, newPath+"/"+fullname.join(","), err => {
         if(err) throw err; // не удалось переместить файл
         console.log('Файл успешно перемещён в '+newPath);
         fs.close

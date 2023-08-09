@@ -12,7 +12,10 @@ import retrofit2.Response
 import retrofit2.converter.gson.GsonConverterFactory
 
 fun retrofitBuilder(): ApiInterface {
-    var BaseUrl="http://134.0.118.41:3000/"
+//    var BaseUrl="http://134.0.118.41:3000/"
+    // TODO: Edit
+//    var BaseUrl="http://127.0.0.1:3000/"
+    var BaseUrl="http://10.0.2.2:3000/"
     val retrofitBuilder by lazy { Retrofit.Builder().baseUrl(BaseUrl).addConverterFactory(GsonConverterFactory.create()).build().create(ApiInterface::class.java)}
      return retrofitBuilder
 }
