@@ -29,7 +29,8 @@ def Distributer(execise,chatid,number):
     cursor.execute(SelectAll)
     line=cursor.fetchall()[0]
     rest=line[-1]
-    type=line[-2]
+    # TODO: Надо определиться, будет ли графа отдыха в каждой таблице 
+    type=line[-1]
     line=line[0:-1]
     title=line[0]
     weight=line[1]
@@ -43,6 +44,7 @@ def Distributer(execise,chatid,number):
     if ex_number==None or ex_number == len(execises)-1:
         return ad_to_mark.mark_done(cursor,number,execise,chatid)
     else:
+        print("type is " + str(type))
         if (type == "c"):
             return classical_training(title,weight,execises,colors,ex_number,number,chatid,rest)
         elif (type == "p"):
