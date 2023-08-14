@@ -28,7 +28,9 @@ def Distributer(execise,chatid,number):
     SelectAll = "SELECT * FROM " + str("f") + number + " WHERE execises = '" + execise + "'"
     cursor.execute(SelectAll)
     line=cursor.fetchall()[0]
-    rest=line[-1]
+    # rest=line[-1]
+    # TODO: EDIT this
+    rest="2 минуты"
     # TODO: Надо определиться, будет ли графа отдыха в каждой таблице 
     type=line[-1]
     line=line[0:-1]

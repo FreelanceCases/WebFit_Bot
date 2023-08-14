@@ -79,7 +79,9 @@ def training_message_data_formatter_v2(data):
 def training_message(number, exercises, first, last):
     print(first, last)
     result = f"<b>ТРЕНИРОВКА №{str(number)}</b>\n\n"
-    result += str(first).upper() + "\n\n"
+    # result += str(first).upper() + "\n\n"
+    # TODO: EDIT this
+    result += "РАЗМИНКА" + "\n\n"
     index = 0
     for ex in exercises:
         if ex.t[0] == 'c':
